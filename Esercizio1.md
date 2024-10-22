@@ -16,12 +16,15 @@ per confrontarlo con le soluzioni.
 ### Si scriva un file `HelloWorld.java` contenente un `main` con una stampa a video e si osservi il contenuto del repository
 
 ### Si aggiunga `HelloWorld.java` allo stage, e si osservi lo stato del repository
+- git add nomeFile
 
 ### Si crei il primo commit, con messaggio ragionevole. Se necessario, si configuri nome utente ed email di git usando i dati dell'account istituzionale.
+- git commit
 
 ### Si compili il file Java e si verifichi lo stato del repository
 
 ### Si noti che c'è un file rigenerabile (`HelloWorld.class`). Si costruisca una lista di file ignorati che ignori tutti i file con estensione `.class`
+- echo cosaVogliamoIgnorare >> .gitignore
 
 ### Si osservi lo stato del repository
 
@@ -40,19 +43,29 @@ per confrontarlo con le soluzioni.
 ### Si elimini `ToDelete.java` e si registri la modifica in un commit
 
 ### Si osservi la storia del repository e si identifichi il commit dove è stato creato `Mistake.java`. Per una visione compatta, si usi l'opzione `--oneline`
+- git log --all --graph --oneline
 
 ### Si ripristini Mistake.java dal commit identificato al passo precedente
+- git checkout 922a826 -- Mistake.java
 
 ### Si rimuova il file ripristinato e si ripulisca lo stage
+- del Mistake.java
 
 ### Si torni al commit precedente a quello in cui `Mistake.java` è stato creato. Si utilizzi la storia del repository se utile.
 
 ### Si crei un nuovo branch di nome `experiment` e si agganci la `HEAD` al nuovo branch
+- git branch experiment
+- git checkout experiment
 
 ### Si crei un file README.md con contenuto a piacere, e si faccia un commit che lo includa
+- echo "Testo random di un file README.md" >> README.md
 
 ### Si torni sul branch master e si elenchino i branch disponibili
+- git checkout master
+- git branch -v
 
 ### Si unisca il branch experiment al branch master (si faccia un merge in cui experiment viene messo dentro master, e non viceversa)
+- git merge target
 
 ### Si osservi la storia del repository
+- git log --all --graph --oneline
