@@ -5,10 +5,13 @@ si annoti in questo file il comando utilizzato ed il suo output,
 per confrontarlo con le soluzioni.
 
 ### Si crei una nuova directory
+- mkdir nomeCartella
 
 ### Si inizializzi un repository Git dentro la cartella suddetta.
+- git init
 
 ### Si osservi lo stato del repository
+- git status 
 
 ### Si scriva un file `HelloWorld.java` contenente un `main` con una stampa a video e si osservi il contenuto del repository
 
